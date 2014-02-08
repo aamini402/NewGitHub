@@ -16,6 +16,11 @@ namespace TimeTracker
             InitializeComponent();
         }
 
+        private void lnklblcreateNewUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
        
     }
 }

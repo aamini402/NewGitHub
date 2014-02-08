@@ -80,6 +80,7 @@
             this.lnklblcreateNewUser.TabIndex = 5;
             this.lnklblcreateNewUser.TabStop = true;
             this.lnklblcreateNewUser.Text = "Create New User";
+            this.lnklblcreateNewUser.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblcreateNewUser_LinkClicked);
             // 
             // txtBoxPassword
             // 

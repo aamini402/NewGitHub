@@ -17,16 +17,19 @@ namespace TimeTracker
         {
             InitializeComponent();
         }
+        
 
        
         private void btnSave_Click(object sender, EventArgs e)
         {
             UserBO userBO = new UserBO();
             userBO.RoleBO = new RoleBO();
-             userBO.Username = txtboxUsername.Text;
+            UserBL USerBL = new UserBL();
+            userBO.Username = txtboxUsername.Text;
              userBO.Password= txtboxPassword.Text;
              userBO.PhnNo = Convert.ToInt64(txtboxContactNumber.Text);
              userBO.RoleBO.RoleName = rdoBtnAdministrator.Checked ? "administrator" : "employee";
+             USerBL.CreatUser(userBO);
 
  
 
