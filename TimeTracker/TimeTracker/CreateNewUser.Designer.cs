@@ -30,6 +30,9 @@
         {
             this.lblTimeSheet = new System.Windows.Forms.Label();
             this.grpboxUserDetails = new System.Windows.Forms.GroupBox();
+            this.rdoBtnEmployee = new System.Windows.Forms.RadioButton();
+            this.rdoBtnAdministrator = new System.Windows.Forms.RadioButton();
+            this.lblRoleName = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtboxContactNumber = new System.Windows.Forms.TextBox();
             this.txtboxEmailid = new System.Windows.Forms.TextBox();
@@ -41,9 +44,6 @@
             this.lblConfirmPassword = new System.Windows.Forms.Label();
             this.lblPasword = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.lblRoleName = new System.Windows.Forms.Label();
-            this.rdoBtnAdministrator = new System.Windows.Forms.RadioButton();
-            this.rdoBtnEmployee = new System.Windows.Forms.RadioButton();
             this.grpboxUserDetails.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,6 +84,39 @@
             this.grpboxUserDetails.TabStop = false;
             this.grpboxUserDetails.Text = "User Details";
             // 
+            // rdoBtnEmployee
+            // 
+            this.rdoBtnEmployee.AutoSize = true;
+            this.rdoBtnEmployee.Location = new System.Drawing.Point(201, 197);
+            this.rdoBtnEmployee.Name = "rdoBtnEmployee";
+            this.rdoBtnEmployee.Size = new System.Drawing.Size(79, 17);
+            this.rdoBtnEmployee.TabIndex = 13;
+            this.rdoBtnEmployee.Text = "Employee";
+            this.rdoBtnEmployee.UseVisualStyleBackColor = true;
+            // 
+            // rdoBtnAdministrator
+            // 
+            this.rdoBtnAdministrator.AutoSize = true;
+            this.rdoBtnAdministrator.Checked = true;
+            this.rdoBtnAdministrator.Location = new System.Drawing.Point(201, 174);
+            this.rdoBtnAdministrator.Name = "rdoBtnAdministrator";
+            this.rdoBtnAdministrator.Size = new System.Drawing.Size(98, 17);
+            this.rdoBtnAdministrator.TabIndex = 12;
+            this.rdoBtnAdministrator.TabStop = true;
+            this.rdoBtnAdministrator.Text = "Administrator";
+            this.rdoBtnAdministrator.UseVisualStyleBackColor = true;
+            // 
+            // lblRoleName
+            // 
+            this.lblRoleName.AutoSize = true;
+            this.lblRoleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoleName.ForeColor = System.Drawing.Color.Blue;
+            this.lblRoleName.Location = new System.Drawing.Point(65, 176);
+            this.lblRoleName.Name = "lblRoleName";
+            this.lblRoleName.Size = new System.Drawing.Size(80, 16);
+            this.lblRoleName.TabIndex = 11;
+            this.lblRoleName.Text = "Role Name:";
+            // 
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -93,6 +126,7 @@
             this.btnSave.TabIndex = 10;
             this.btnSave.Text = "save ";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtboxContactNumber
             // 
@@ -161,7 +195,6 @@
             this.lblConfirmPassword.Size = new System.Drawing.Size(122, 16);
             this.lblConfirmPassword.TabIndex = 2;
             this.lblConfirmPassword.Text = "Confirm Password :";
-            this.lblConfirmPassword.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblPasword
             // 
@@ -184,39 +217,6 @@
             this.lblUsername.Size = new System.Drawing.Size(77, 16);
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "Username :";
-            // 
-            // lblRoleName
-            // 
-            this.lblRoleName.AutoSize = true;
-            this.lblRoleName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRoleName.ForeColor = System.Drawing.Color.Blue;
-            this.lblRoleName.Location = new System.Drawing.Point(65, 176);
-            this.lblRoleName.Name = "lblRoleName";
-            this.lblRoleName.Size = new System.Drawing.Size(80, 16);
-            this.lblRoleName.TabIndex = 11;
-            this.lblRoleName.Text = "Role Name:";
-            // 
-            // rdoBtnAdministrator
-            // 
-            this.rdoBtnAdministrator.AutoSize = true;
-            this.rdoBtnAdministrator.Location = new System.Drawing.Point(201, 174);
-            this.rdoBtnAdministrator.Name = "rdoBtnAdministrator";
-            this.rdoBtnAdministrator.Size = new System.Drawing.Size(98, 17);
-            this.rdoBtnAdministrator.TabIndex = 12;
-            this.rdoBtnAdministrator.TabStop = true;
-            this.rdoBtnAdministrator.Text = "Administrator";
-            this.rdoBtnAdministrator.UseVisualStyleBackColor = true;
-            // 
-            // rdoBtnEmployee
-            // 
-            this.rdoBtnEmployee.AutoSize = true;
-            this.rdoBtnEmployee.Location = new System.Drawing.Point(201, 197);
-            this.rdoBtnEmployee.Name = "rdoBtnEmployee";
-            this.rdoBtnEmployee.Size = new System.Drawing.Size(79, 17);
-            this.rdoBtnEmployee.TabIndex = 13;
-            this.rdoBtnEmployee.TabStop = true;
-            this.rdoBtnEmployee.Text = "Employee";
-            this.rdoBtnEmployee.UseVisualStyleBackColor = true;
             // 
             // frmCreateNewUser
             // 

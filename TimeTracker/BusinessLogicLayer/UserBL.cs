@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BusinessObject
+namespace BusinessLogicLayer
 {
-    public class Class1
+    public class UserBL
     {
     }
 }

@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using BusinessLogicLayer;
+using BusinessObject;
 
 namespace TimeTracker
 {
@@ -16,8 +18,17 @@ namespace TimeTracker
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+       
+        private void btnSave_Click(object sender, EventArgs e)
         {
+            UserBO userBO = new UserBO();
+            userBO.RoleBO = new RoleBO();
+             userBO.Username = txtboxUsername.Text;
+             userBO.Password= txtboxPassword.Text;
+             userBO.PhnNo = Convert.ToInt64(txtboxContactNumber.Text);
+             userBO.RoleBO.RoleName = rdoBtnAdministrator.Checked ? "administrator" : "employee";
+
+ 
 
         }
     }
