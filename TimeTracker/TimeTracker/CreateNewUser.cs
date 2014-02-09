@@ -17,21 +17,29 @@ namespace TimeTracker
         {
             InitializeComponent();
         }
-        
 
-       
+
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             UserBO userBO = new UserBO();
             userBO.RoleBO = new RoleBO();
             UserBL USerBL = new UserBL();
             userBO.Username = txtboxUsername.Text;
-             userBO.Password= txtboxPassword.Text;
-             userBO.PhnNo = Convert.ToInt64(txtboxContactNumber.Text);
-             userBO.RoleBO.RoleName = rdoBtnAdministrator.Checked ? "administrator" : "employee";
-             USerBL.CreatUser(userBO);
+            userBO.EmailId = txtboxEmailid.Text;
+            userBO.Password = txtboxPassword.Text;
+            userBO.PhnNo = Convert.ToInt64(txtboxContactNumber.Text);
+            userBO.RoleBO.RoleName = rdoBtnAdministrator.Checked ? "administrator" : "employee";
+            bool isUserCreated = USerBL.CreatUser(userBO);
+            if (isUserCreated == true)
+            {
+                frmUserLogin ul = new frmUserLogin();
+            }
+            else
+                MessageBox.Show("error in creating user!!!try again");
 
- 
+
+
 
         }
     }

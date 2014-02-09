@@ -18,7 +18,8 @@ namespace TimeTracker
 
         private void lnklblcreateNewUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            frmCreateNewUser cnu = new frmCreateNewUser();
+            cnu.Show();
         }
 
        

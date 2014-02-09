@@ -15,5 +15,11 @@ namespace TimeTracker
         {
             InitializeComponent();
         }
+
+        private void frmReport_Load(object sender, EventArgs e)
+        {
+            
+
+        }
     }
 }

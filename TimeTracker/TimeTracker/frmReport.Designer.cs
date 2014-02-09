@@ -218,6 +218,7 @@
             this.Controls.Add(this.lblTimeSheet);
             this.Name = "frmReport";
             this.Text = "frmReport";
+            this.Load += new System.EventHandler(this.frmReport_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
