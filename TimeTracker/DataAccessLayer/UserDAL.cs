@@ -30,7 +30,28 @@ namespace DataAccessLayer
 
             return false;
 
+           
         }
+
+        public string GetUserDetail(UserBO userBO)
+        {
+
+            connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=TimeSheet;Integrated Security=True");
+            SqlCommand cmd = new SqlCommand("spGetUserDetail ", connection);
+            connection.Open();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@username", userBO.Username);
+            SqlParameter outputParameter = new SqlParameter();
+            outputParameter.ParameterName="@password";
+            outputParameter.SqlDbType=System.Data.SqlDbType.Int;
+            outputParameter.Direction=System.Data.ParameterDirection.Output;
+            cmd.Parameters.Add(outputParameter);
+            cmd.ExecuteNonQuery();
+            string password = outputParameter.Value.ToString();
+            return password;
+        }
+
+
 
     }
 }

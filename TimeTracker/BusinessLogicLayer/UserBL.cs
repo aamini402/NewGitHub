@@ -13,7 +13,17 @@ namespace BusinessLogicLayer
         {
             UserDAL userDal = new UserDAL();
             return userDal.CreateUser(userBO);
+            
         }
-
+        public bool isValidUser(UserBO userBO)
+        {
+            UserDAL userDal = new UserDAL();
+            if (userBO.Password == userDal.GetUserDetail(userBO))
+                return true;
+            else
+                return false;
+            
+        }
+       
     }
 }

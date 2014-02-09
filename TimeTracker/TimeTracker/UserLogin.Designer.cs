@@ -104,6 +104,7 @@
             this.btnSignIn.TabIndex = 2;
             this.btnSignIn.Text = "Sign In";
             this.btnSignIn.UseVisualStyleBackColor = true;
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
             // lblPassword
             // 
